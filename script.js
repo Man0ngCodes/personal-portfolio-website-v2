@@ -137,9 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         draw() {
-            // Check if dark theme is active for dynamic coloring
-            const isDark = document.body.classList.contains('dark-theme');
-            let color = isDark ? `rgba(167, 139, 250, ${this.size/5})` : `rgba(59, 130, 246, ${this.size/5})`;
+            // Keep floaters locked to dark mode aesthetic
+            let color = `rgba(167, 139, 250, ${this.size/5})`;
             
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
@@ -209,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function connectParticles() {
-        const isDark = document.body.classList.contains('dark-theme');
         let maxDistance = 120;
         for (let a = 0; a < particles.length; a++) {
             for (let b = a; b < particles.length; b++) {
@@ -219,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (distance < (maxDistance * maxDistance)) {
                     let opacity = 1 - (distance / (maxDistance * maxDistance));
-                    ctx.strokeStyle = isDark ? `rgba(167, 139, 250, ${opacity * 0.2})` : `rgba(59, 130, 246, ${opacity * 0.2})`;
+                    ctx.strokeStyle = `rgba(167, 139, 250, ${opacity * 0.2})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);

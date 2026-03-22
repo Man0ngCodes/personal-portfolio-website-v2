@@ -1,6 +1,6 @@
 :root {
     /* Light Theme (Default - Apple Liquid Glass Inspired) */
-    --bg-color: #ffffff;
+    --bg-color: #0B0E14; /* Lock background to dark mode color */
     --text-primary: #1d1d1f;
     --text-secondary: #86868b;
     --accent-primary: #0071e3;
