@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neil Sayco - Technical Virtual Assistant & n8n Automation Specialist">
+    <title>Neil Sayco | Technical VA & Automation Specialist</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas for Floating Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">NS.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="glass-panel text-center hero-section reveal">
+            <h1 class="hero-title">Neil <span class="gradient-text">Sayco</span></h1>
+            <h2 class="hero-subtitle">Technical Virtual Assistant & Automation Specialist</h2>
+            <p class="hero-tagline">Bridging the gap between complex engineering systems and seamless business automation.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Let's Automate</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="glass-panel reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>After spending over 11 years as an electrical and commissioning engineer — verifying complex systems, troubleshooting high-stakes technical infrastructures, and coordinating multi-million-dollar project deliveries — I made a deliberate pivot into the world of Technical Virtual Assistance and Automation. That engineering background didn't disappear; it became my competitive edge.</p>
+                <p>An analytical mindset, meticulous attention to detail, and a relentless drive to get systems running at peak performance are woven into everything I do.</p>
+                <p>Today I specialize in serving US-based businesses by managing self-hosted environments, building and troubleshooting API integrations, and designing powerful n8n automations that eliminate manual grunt work. I bring an engineer's rigor to backend operations — ensuring every webhook fires, every data pipeline flows, and every workflow runs exactly as intended.</p>
+                <p class="highlight-text">If there's a system to optimize, I want to be the one optimizing it.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="glass-panel reveal">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">n8n Automation</div>
+                <div class="skill-tag">API Integrations</div>
+                <div class="skill-tag">Webhooks</div>
+                <div class="skill-tag">Server Administration</div>
+                <div class="skill-tag">VPS Management</div>
+                <div class="skill-tag">Self-Hosting</div>
+                <div class="skill-tag">Data Structuring</div>
+                <div class="skill-tag">Prompt Engineering</div>
+                <div class="skill-tag">Custom Node Routing</div>
+                <div class="skill-tag">Business Process Optimization</div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="glass-panel reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 — PRESENT</div>
+                    <div class="timeline-content">
+                        <h3>Commissioning Engineer</h3>
+                        <p>AESG, UAE</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 — 2024</div>
+                    <div class="timeline-content">
+                        <h3>Commissioning Engineer</h3>
+                        <p>CML International (Dubai) LLC, UAE</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2013 — 2018</div>
+                    <div class="timeline-content">
+                        <h3>Commissioning Engineer</h3>
+                        <p>Aeight Pacific Corporation (FORSSPAC), Philippines</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="glass-panel reveal">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-panel-inner">
+                    <h3>Self-Hosted Automation Server</h3>
+                    <p>Deployed and managed a self-hosted n8n instance on a Hostinger VPS. Configured secure environment variables, managed backend troubleshooting, and resolved complex OAuth redirect_uri_mismatch errors.</p>
+                    <div class="project-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">VPS</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel-inner">
+                    <h3>AI Chatbot Knowledge Base</h3>
+                    <p>Structured a foundational knowledge base for an AI-powered customer service chatbot. Organized business data and operational logic for automated customer inquiry resolution (Sip & Snack Society).</p>
+                    <div class="project-tags">
+                        <span class="tag">AI Integration</span>
+                        <span class="tag">Data Structuring</span>
+                    </div>
+                </div>
+                <div class="project-card glass-panel-inner">
+                    <h3>Advanced Workflow Automation</h3>
+                    <p>Developed custom automation logic utilizing n8n expressions and custom node routing to streamline data transfer and eliminate manual administrative tasks.</p>
+                    <div class="project-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">BPA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="glass-panel reveal">
+            <h2 class="section-title">What They Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-panel-inner">
+                    <p class="quote">"Neil is an absolute powerhouse. He didn't just automate our workflows; he re-engineered the way we think about data accuracy."</p>
+                    <p class="author">- Sarah Jenkins, CEO</p>
+                </div>
+                <div class="testimonial-card glass-panel-inner">
+                    <p class="quote">"Neil took over our VPS management and n8n backend with zero hand-holding. His ability to troubleshoot API errors is second to none."</p>
+                    <p class="author">- Marcus Vance, Founder</p>
+                </div>
+                <div class="testimonial-card glass-panel-inner">
+                    <p class="quote">"He has a unique ability to take complex technical requirements and turn them into smooth, automated business processes."</p>
+                    <p class="author">- Emily Chen, Operations Director</p>
+                </div>
+                <div class="testimonial-card glass-panel-inner">
+                    <p class="quote">"Bringing Neil on board felt like hiring a senior systems engineer. He maps out the logic behind every automation before building it."</p>
+                    <p class="author">- Tom Baker, SaaS Founder</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glass-panel reveal text-center">
+            <h2 class="section-title">Ready to Automate?</h2>
+            <p style="margin-bottom: 2rem;">Let's build reliable systems that scale with your business.</p>
+            <div class="contact-links">
+                <a href="mailto:neil.tech.va@gmail.com" class="btn btn-primary">neil.tech.va@gmail.com</a>
+                <a href="https://www.linkedin.com/in/neil-tech-va/" target="_blank" class="btn btn-secondary">LinkedIn Profile</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-panel text-center">
+        <p>&copy; 2026 Neil Sayco. All rights reserved. | Bridging Engineering and Automation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
