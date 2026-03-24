@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BPMN 2.0 Translator - Renderer Automation Tool">
+    <title>BPMN 2.0 Translator | Neil Sayco</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .iframe-container {
+            width: 100%;
+            height: 75vh;
+            min-height: 600px;
+            border: none;
+            border-radius: 12px;
+            background: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas for Floating Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" style="text-decoration: none;">NS.</a>
+            <div class="nav-links">
+                <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">← Back to Home</a>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Project Header -->
+        <section class="glass-panel text-center reveal" style="margin-top: 60px;">
+            <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 20px;">BPMN 2.0 <span class="gradient-text">Translator & Renderer</span></h1>
+            <p class="hero-tagline">Automatically translate human-readable business process descriptions into standard BPMN 2.0 XML notation format with visual rendering.</p>
+        </section>
+
+        <!-- Tool Embedded Iframe -->
+        <section class="glass-panel reveal" style="padding: 20px;">
+            <iframe class="iframe-container" src="https://n8n.srv1320209.hstgr.cloud/form/fc5dc3ae-5462-4451-972e-0d9f93120015" title="BPMN Translator Form"></iframe>
+        </section>
+    </main>
+
+    <footer class="glass-panel text-center">
+        <p>&copy; 2026 Neil Sayco. All rights reserved. | Bridging Engineering and Automation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
