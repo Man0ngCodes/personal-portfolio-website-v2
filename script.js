@@ -228,6 +228,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Carousel Logic
+    const carousel = document.querySelector('.projects-carousel');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (carousel && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            const slideWidth = carousel.querySelector('.carousel-slide').offsetWidth; 
+            carousel.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            const slideWidth = carousel.querySelector('.carousel-slide').offsetWidth;
+            carousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        });
+    }
+
+    // Lightbox Logic for Image Expansion
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const zoomableImages = document.querySelectorAll('.slide-image');
+
+    if (lightbox && lightboxImg && zoomableImages) {
+        zoomableImages.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop navigation if inside an <a> tag
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        // Close on X click
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', () => {
+                lightbox.classList.add('hidden');
+            });
+        }
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.add('hidden');
+            }
+        });
+    }
+
     initParticles();
     animateParticles();
 });

@@ -11,13 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        .iframe-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 50vh; /* Giving enough vertical space to center exactly */
+            padding: 20px 10px;
+            background: transparent;
+        }
+
         .iframe-container {
             width: 100%;
-            height: 75vh;
-            min-height: 600px;
+            max-width: 650px; /* Snug fit to remove excess white borders */
+            height: 655px;
             border: none;
             border-radius: 12px;
-            background: var(--bg-color);
+            background: transparent;
+            box-shadow: none; /* Removed box shadow to allow seamless transparency */
+            transition: filter 0.8s ease;
+        }
+
+        /* Smart visual inversion to simulate native Dark Mode on the cross-origin iframe! */
+        body.dark-theme .iframe-container {
+            filter: invert(0.92) hue-rotate(180deg) brightness(1.05); /* Invert white to dark slate, preserve red/orange UI hues */
         }
     </style>
 </head>
@@ -47,8 +64,10 @@
         </section>
 
         <!-- Tool Embedded Iframe -->
-        <section class="glass-panel reveal" style="padding: 20px;">
-            <iframe class="iframe-container" src="https://n8n.srv1320209.hstgr.cloud/form/fc5dc3ae-5462-4451-972e-0d9f93120015" title="BPMN Translator Form"></iframe>
+        <section class="reveal" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+            <div class="iframe-wrapper">
+                <iframe class="iframe-container" src="https://n8n.srv1320209.hstgr.cloud/form/fc5dc3ae-5462-4451-972e-0d9f93120015" title="BPMN Translator Form" allowtransparency="true"></iframe>
+            </div>
         </section>
     </main>
 
