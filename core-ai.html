@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CORE Commissioning AI Agent">
+    <title>CORE Cx AI Agent | Neil Sayco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    
+    <style>
+        /* Keeping your layout clean without the iframe constraints */
+        .chat-placeholder {
+            min-height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        /* Branding the Chat Widget via CSS Variables */
+        :root {
+            --n8n-chat-primary-color: #e63946; /* Professional Red/Orange for Cx */
+            --n8n-chat-button-background: #e63946;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" style="text-decoration: none;">NS.</a>
+            <div class="nav-links">
+                <a href="index.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">← Back to Home</a>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="glass-panel text-center reveal" style="margin-top: 60px;">
+            <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 20px;">CORE AI <span class="gradient-text">Cx Agent</span></h1>
+            <p class="hero-tagline">Your AI-powered commissioning assistant.</p>
+        </section>
+
+        <section class="reveal" style="padding: 40px 0; background: transparent;">
+            <div class="chat-placeholder">
+                <p style="text-align: center;">Click the chat icon in the bottom right to talk to the Agent. Use <strong>GUEST</strong> as your username and <strong>guest1234</strong> as your password to access the chat.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-panel text-center">
+        <p>&copy; 2026 Neil Sayco. All rights reserved. | Bridging Engineering and Automation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.srv1320209.hstgr.cloud/webhook/e209eb72-633b-47cf-ab61-6b0a63a31b7f/chat',
+            mode: 'window',
+            showWelcomeScreen: true,
+            initialMessages: [
+                'Hi I\'m the CORE! Your AI commissioning buddy. 👋',
+                'I am your AI assistant for everything commissioning in the built environment. How can I help you today?'
+            ],
+            i18n: {
+                en: {
+                    title: 'CORE AI Agent',
+                    subtitle: 'Commissioning Assistant',
+                    inputPlaceholder: 'Ask a technical question...',
+                },
+            },
+            style: {
+                '--chat--light--primary-color': '#e63946',
+                '--chat--light--header--background': '#1a1a1a',
+                '--chat--light--header--color': '#ffffff',
+                '--chat--dark--primary-color': '#e63946',
+                '--chat--dark--header--background': '#000000',
+                '--chat--dark--header--color': '#ffffff',
+            }
+        });
+    </script>
+</body>
+</html>
