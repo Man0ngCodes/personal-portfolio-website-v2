@@ -275,6 +275,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Slide Gallery Logic
+    const galleries = document.querySelectorAll('.image-gallery-wrapper');
+    galleries.forEach(wrapper => {
+        const gallery = wrapper.querySelector('.image-gallery');
+        const prevBtn = wrapper.querySelector('.prev-gallery');
+        const nextBtn = wrapper.querySelector('.next-gallery');
+        let currentIndex = 0;
+        const imagesCount = gallery ? gallery.querySelectorAll('img').length : 0;
+        
+        if(prevBtn && nextBtn && gallery && imagesCount > 0) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (currentIndex < imagesCount - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = imagesCount - 1;
+                }
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        }
+    });
+
     initParticles();
     animateParticles();
 });
