@@ -47,6 +47,7 @@
             </div>
         </section>
 
+
         <!-- Bento Grid Section (Replaces About, Skills, Experience) -->
         <section id="bento-grid-section" class="reveal">
             <div class="bento-container">
@@ -63,6 +64,17 @@
                         <p class="highlight-text mt-3">If there's a system to optimize, I want to be the one optimizing it.</p>
                     </div>
                 </div>
+
+        <!-- About Section -->
+        <section id="about" class="glass-panel reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>With 11 years of experience in the construction industry, I am currently engaged in building technical automations, with a core specialization in Artificial Intelligence.</p>
+                <p>My interest was captured by AI due to the outstanding benefits it brought to my construction career. This inspired me to start working independently, leveraging AI to help businesses outside of construction optimize their operations.</p>
+                <p class="highlight-text">I am now looking to transition into a full-time role as an AI Automation Specialist.</p>
+            </div>
+        </section>
+
 
                 <!-- Skills Bento Item (Medium) -->
                 <div class="bento-item bento-medium glass-panel interactive-card" id="skills">
@@ -137,6 +149,30 @@
             <div class="carousel-wrapper" style="width: 100vw; margin-top: 40px;">
                 <button class="carousel-btn prev-btn" aria-label="Previous Project" style="left: 3vw;">❮</button>
                 <div class="projects-carousel" style="padding: 0; gap: 0;">
+                    <!-- RAG Agent Project -->
+                    <div class="carousel-slide">
+                        <div class="slide-content-layout">
+                            <div class="image-gallery-wrapper">
+                                <div class="image-gallery">
+                                    <img src="rag-agent-screenshot.png" alt="RAG Agent UI" class="slide-image gallery-img">
+                                    <img src="ingestion-workflow-screenshot.png" alt="Ingestion Workflow" class="slide-image gallery-img">
+                                </div>
+                                <button class="gallery-btn prev-gallery" aria-label="Previous Image">❮</button>
+                                <button class="gallery-btn next-gallery" aria-label="Next Image">❯</button>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Simple Retrieval-Augmented Generation (RAG) Agent</h3>
+                                <p>A simple AI Agent for Commissioning Engineers that utilizes Retrieval-Augmented Generation (RAG) to provide contextually relevant information and support.</p>
+                                <div class="project-tags">
+                                    <span class="tag">n8n</span>
+                                    <span class="tag">supabase</span>
+                                    <span class="tag">js ES 6.0</span>
+                                    <span class="tag">API integration</span>
+                                </div>
+                                <a href="core-ai.html" class="btn btn-primary" style="margin-top: 25px; align-self: flex-start;">Open Split-Screen UI</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- BPMN Project -->
                     <div class="carousel-slide">
                         <a href="bpmn-translator.html" class="slide-content-layout" style="text-decoration: none; color: inherit;">
@@ -168,22 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CORE Cx AI Agent Project -->
-                    <div class="carousel-slide">
-                        <a href="core-ai.html" class="slide-content-layout" style="text-decoration: none; color: inherit;">
-                            <img src="core-ai-screenshot.png" alt="CORE AI Cx Agent" class="slide-image">
-                                <div class="slide-text">
-                                    <h3>CORE AI Cx Agent</h3>
-                                    <p>A simple AI Agent for Commissioning Engineers that utilizes Retrieval-Augmented Generation (RAG) to provide contextually relevant information and support.</p>
-                                    <div class="project-tags">
-                                        <span class="tag">n8n</span>
-                                        <span class="tag">AI Integration</span>
-                                        <span class="tag">RAG</span>
-                                    </div>
-                                </div>
-                        </a>
-                    </div>
-
+                </div>
                 <button class="carousel-btn next-btn" aria-label="Next Project" style="right: 3vw;">❯</button>
             </div>
         </section>
